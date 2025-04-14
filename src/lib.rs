@@ -1,6 +1,19 @@
 use pyo3::prelude::*;
-
+/// add(a: int, b: int)
+/// --
+/// 
 /// Formats the sum of two numbers as string.
+/// 
+/// Parameters
+/// ----------
+/// a : int
+///     Integer being added
+/// b : int
+///     Integer 2 being added
+/// Returns
+/// -------
+/// str
+///     a + b then converted to a string.
 #[pyfunction]
 fn sum_as_string(a: usize, b: usize) -> PyResult<String> {
     Ok((a + b).to_string())
