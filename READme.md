@@ -13,15 +13,15 @@ You will have to install these yourself
 
 setting it up
 -------------
-1. Copy this repo into a folder with your `project-name`.
+1. Copy this repo into a folder named with your `project-name`.
 2. update the `project-name` and `lib.nam` field in the [Cargo.toml](Cargo.toml) with your `project-name`.
 3. Upate `project.name` in [pyroject.toml](pyproject.toml) to match `project-name`.
 4. Update the module name from `pyo3_example` in [src/lib.rs](src/lib.rs) to match `project-name`.
 5. Update the import path in [pytests/test_env.py](pytests/test_env.py) to match `project-name`.
 6. Update the `project` at the top of [docs/source/conf.py](docs/source/conf.py).
-7. Run  [startup](startup.bat) to generate the python virtual environment and activate it.
-8. Run [test](test.bat) to compile the rust binary and run the pytests module, if it passes than the environment is setup.
-9. Run [document](document.bat) to build documentation.
+7. From projcet root run `startup` to generate the python virtual environment and activate it.
+8. From projcet root run `test`  to compile the rust binary and run the pytests module, if it passes than the environment is setup.
+9. From projcet root run `make html` to build documentation.
 10. For vscode select the virtual environment as your python interpreter `ctrl+shift+p` than `Python: Select Interpreter`.
 
 Scripts and CLI cheetsheet
