@@ -1,0 +1,2 @@
+maturin develop
+pytest pytests
