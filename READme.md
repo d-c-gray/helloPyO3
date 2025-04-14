@@ -4,6 +4,10 @@ HelloPyO3
 This repo is a template for setting up a development environment for using PyO3, a crate for making python Packages in
 Rust (this template was made for Windows, I have not used it in Linux or Mac).
 
+Template includes:
+* soure code directory setup for with pre-made config files
+* configured dodcumentationw with Sphinx using numpy style doc strings
+
 external dependencies
 ---------------------
 You will have to install these yourself
