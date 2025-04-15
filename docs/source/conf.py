@@ -1,5 +1,5 @@
 from importlib.metadata import version as _get_version
-
+from pathlib import Path
 
 # Configuration file for the Sphinx documentation builder.
 #
@@ -9,7 +9,7 @@ from importlib.metadata import version as _get_version
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'hello-pyo3'
+project = 'hello_pyo3'
 copyright = '2025, daniel cole gray'
 author = 'daniel cole gray'
 release = _get_version(project)
