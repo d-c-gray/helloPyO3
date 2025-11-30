@@ -9,8 +9,8 @@ This includes:
 
 External Dependencies
 ---------------------
-* [uv](https://github.com/astral-sh/uv) for python package management and development
-* [rust/cargo](https://www.rust-lang.org/tools/install) for rust development
+* [uv](https://github.com/astral-sh/uv)
+* [rust/cargo](https://www.rust-lang.org/tools/install)
 * [make](https://gnuwin32.sourceforge.net/packages/make.htm)
 
 Setting it up
