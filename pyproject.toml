@@ -1,5 +1,5 @@
 [project]
-name = "hello_pyo3"
+name = "MY_MODULE"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -18,8 +18,28 @@ dev = [
     "maturin>=1.8.3",
     "pytest>=8.3.5",
     "sphinx>=8.2.3",
+    "ruff>=0.14.7",
 ]
 
 [build-system]
 requires = ["maturin>=1,<2"]
 build-backend = "maturin"
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["E402"]
+"**/{tests,docs,tools}/*" = ["E402"]
+
+[tool.uv-dynamic-versioning]
+vcs = "git"
+style = "pep440"
+bump = true
+
+[tool.pytest.ini_options]
+python_files = ["*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+testpaths = [
+    "pytests",
+]
+norecursedirs = []
+filterwarnings = []

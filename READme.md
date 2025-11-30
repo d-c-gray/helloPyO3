@@ -1,45 +1,41 @@
 HelloPyO3
 =========
 
-This repo is a template for setting up a development environment for using PyO3, a crate for making python Packages in
-Rust (this template was made for Windows, I have not used it in Linux or Mac).
+This repo is a template for setting up a development environment for using PyO3
+This includes:
+* A basic module layout for ``lib.rs`` that builds a python class
+* A make file that installs and tests code
+* A github workflow file for executing tests.
 
-Template includes:
-* soure code directory setup for with pre-made config files
-* configured dodcumentationw with Sphinx using numpy style doc strings
-
-external dependencies
+External Dependencies
 ---------------------
-You will have to install these yourself
-* [vscode](https://code.visualstudio.com/download) for an IDE that supports Rust and Python
-* [uv](https://github.com/astral-sh/uv) for python package management
-* [rust/cargo](https://www.rust-lang.org/tools/install) for running rust code
+* [uv](https://github.com/astral-sh/uv) for python package management and development
+* [rust/cargo](https://www.rust-lang.org/tools/install) for rust development
+* [make](https://gnuwin32.sourceforge.net/packages/make.htm)
 
-setting it up
+Setting it up
 -------------
-1. Copy this repo into a folder named with your `project-name`.
-2. update the `project-name` and `lib.nam` field in the [Cargo.toml](Cargo.toml) with your `project-name`.
-3. Upate `project.name` in [pyroject.toml](pyproject.toml) to match `project-name`.
-4. Update the module name from `pyo3_example` in [src/lib.rs](src/lib.rs) to match `project-name`.
-5. Update the import path in [pytests/test_env.py](pytests/test_env.py) to match `project-name`.
-6. Update the `project` at the top of [docs/source/conf.py](docs/source/conf.py).
-7. From projcet root run `startup` to generate the python virtual environment and activate it.
-8. From projcet root run `test`  to compile the rust binary and run the pytests module, if it passes than the environment is setup.
-9. From projcet root run `make html` to build documentation.
-10. For vscode select the virtual environment as your python interpreter `ctrl+shift+p` than `Python: Select Interpreter`.
+After cloning the template initialize it with:
+```
+make init MODULE_NAME=my_module
+```
 
-Scripts and CLI cheetsheet
---------------------------
-Everything here is run from the root directory
-* `startup` syncs your virtual environment and activates it.
-* `test` compiles rust binaries and runs pytests.
-* `make clean` cleans up the docs/build directory, useful to run before building documentation after major changes.
-* `make html` to build documentation.
+After that, run ``make`` to execute installation and tests.
+```
+make
+```
+
+Use the ``clean`` and ``build`` commands to clear out ephemeral
+directories and make build the packages.
+```
+make clean
+make build
+```
 
 
-
-
-
+To Do
+-----
+* Incorporate an example of versioned documentation.
 
 
 
